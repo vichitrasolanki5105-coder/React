@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+}
+
+.category-navbar {
+  width: 100%;
+  background-color: #ffffff;
+  border-top: 1px solid #d8d8d8;
+  border-bottom: 1px solid #d8d8d8;
+  padding: 17px 3px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: hidden;
+}
+
+.category-list {
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.category-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex: 1;
+  min-width: 0;
+  cursor: pointer;
+  color: #111111;
+  padding-bottom: 16px;
+}
+
+.category-icon-box {
+  width: 66px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 5px;
+  border-radius: 13px;
+  transition: background-color 0.2s ease;
+}
+
+.category-icon {
+  color: #292929;
+}
+
+.category-name {
+  font-size: 21px;
+  font-weight: 400;
+  white-space: nowrap;
+  text-align: center;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.category-item.active .category-icon-box {
+  background-color: #e2f2ff;
+}
+
+.category-item.active .category-name {
+  font-weight: 700;
+}
+
+.active-underline {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: #2874f0;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Hover Effect */
+
+.category-item:hover .category-icon-box {
+  background-color: #f2f7ff;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  .category-list {
+    overflow-x: auto;
+    justify-content: flex-start;
+    scrollbar-width: none;
+  }
+
+  .category-list::-webkit-scrollbar {
+    display: none;
+  }
+
+  .category-item {
+    flex: 0 0 110px;
+  }
+
+  .category-name {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 600px) {
+  .category-navbar {
+    padding-top: 10px;
+  }
+
+  .category-item {
+    flex: 0 0 85px;
+    padding-bottom: 12px;
+  }
+
+  .category-icon-box {
+    width: 55px;
+    height: 45px;
+  }
+
+  .category-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .category-name {
+    font-size: 14px;
+  }
+
+  .active-underline {
+    height: 4px;
+  }
+}

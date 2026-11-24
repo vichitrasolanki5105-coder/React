@@ -1,0 +1,254 @@
+* {
+  box-sizing: border-box;
+}
+
+.flipkart-header {
+  width: 100%;
+  background-color: white;
+  padding: 20px 3.2%;
+  border-top: 4px solid #5c3b2e;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #212121;
+}
+
+/* Top Section */
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 27px;
+}
+
+.brand-section {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.flipkart-btn,
+.travel-btn {
+  height: 66px;
+  width: 196px;
+  border-radius: 19px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  font-size: 19px;
+  font-weight: bold;
+  font-style: italic;
+  cursor: pointer;
+}
+
+.flipkart-btn {
+  background-color: #ffe500;
+  border: 2px solid #fff0a0;
+}
+
+.flipkart-logo {
+  font-size: 48px;
+  font-weight: bold;
+  font-style: italic;
+  color: #2874f0;
+  line-height: 1;
+}
+
+.travel-btn {
+  background-color: #f1f1f1;
+}
+
+.travel-icon {
+  font-size: 30px;
+}
+
+/* Location */
+
+.location-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 21px;
+  font-weight: 500;
+}
+
+.location-icon {
+  font-size: 17px;
+}
+
+.location-section a {
+  color: #2874f0;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.location-arrow {
+  color: #2874f0;
+  font-size: 32px;
+  line-height: 1;
+}
+
+/* Bottom Section */
+
+.bottom-section {
+  display: flex;
+  align-items: center;
+  gap: 65px;
+  padding: 0 18px;
+  border-bottom: 1px solid #d5d5d5;
+  padding-bottom: 15px;
+}
+
+/* Search */
+
+.search-box {
+  flex: 1;
+  height: 66px;
+  border: 3px solid #2998ff;
+  border-radius: 19px;
+  display: flex;
+  align-items: center;
+  padding: 0 25px;
+  gap: 18px;
+}
+
+.search-icon {
+  width: 30px;
+  height: 30px;
+  color: #777;
+  flex-shrink: 0;
+}
+
+.search-box input {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 24px;
+  color: #212121;
+  background: transparent;
+}
+
+.search-box input::placeholder {
+  color: #666;
+}
+
+/* Navigation */
+
+.nav-section {
+  display: flex;
+  align-items: center;
+  gap: 38px;
+  white-space: nowrap;
+}
+
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 21px;
+  cursor: pointer;
+}
+
+.nav-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.dropdown-arrow {
+  font-size: 25px;
+  margin-left: 2px;
+}
+
+.cart-icon {
+  width: 34px;
+  height: 34px;
+}
+
+/* Responsive Design */
+
+@media (max-width: 1200px) {
+  .bottom-section {
+    gap: 25px;
+  }
+
+  .nav-section {
+    gap: 22px;
+  }
+
+  .search-box input {
+    font-size: 19px;
+  }
+
+  .location-section {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 900px) {
+  .top-section {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .bottom-section {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .nav-section {
+    justify-content: space-around;
+  }
+}
+
+@media (max-width: 600px) {
+  .flipkart-header {
+    padding: 15px;
+  }
+
+  .brand-section {
+    gap: 10px;
+    width: 100%;
+  }
+
+  .flipkart-btn,
+  .travel-btn {
+    width: 50%;
+    height: 55px;
+    font-size: 16px;
+  }
+
+  .location-section {
+    flex-wrap: wrap;
+    font-size: 14px;
+  }
+
+  .search-box {
+    height: 55px;
+    padding: 0 12px;
+    gap: 10px;
+  }
+
+  .search-box input {
+    font-size: 15px;
+  }
+
+  .nav-section {
+    gap: 15px;
+  }
+
+  .nav-item {
+    gap: 7px;
+    font-size: 15px;
+  }
+
+  .nav-icon {
+    width: 24px;
+    height: 24px;
+  }
+}

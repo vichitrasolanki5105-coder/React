@@ -32,7 +32,7 @@ export default function ContactFrom(){
     return(
     <div>
         <h1 >Contact From</h1>
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit    }>
             <label htmlFor="Name">Name</label>
             <input type="text"
               id="Name"

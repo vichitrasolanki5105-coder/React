@@ -24,17 +24,20 @@
 import React from 'react'
 import { useState } from 'react';
 import ContactFrom from './components/ContactForm';
+import LoginForm from './components/LoginForm';
 
 export default function App() {
-  const [count, updateCount]=useState(0);
-
+  var [count, updateCount]=useState(0);
+  var [form, updateForm]=useState(true);
   return(
     <div>
       <h1>Counter Application</h1>
       <p>{count}</p>
       <button onClick={()=> updateCount(count+1)}>Increment</button>
       <button onClick={()=> updateCount(count-1)}>Decrement</button>
-      <ContactFrom/>
+      
+      {form ? <ContactFrom/> :<LoginForm/>}
+      <button onClick={()=> updateForm(!form)}>Change Form</button>
     </div>
   )
 }
